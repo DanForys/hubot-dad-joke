@@ -1,0 +1,25 @@
+{
+  "name": "hubot-dad-joke",
+  "version": "1.0.0",
+  "description": "A Hubot script for keeping tally of your amazing jokes",
+  "README": "https://github.com/DanForys/hubot-dad-joke/blob/master/README.md",
+  "main": "index.coffee",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanForys/hubot-dad-joke.git"
+  },
+  "keywords": [
+    "dad",
+    "joke",
+    "humour",
+    "hubot"
+  ],
+  "author": {
+    "name": "Dan Forys"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanForys/hubot-dad-joke/issues"
+  },
+  "homepage": "https://github.com/DanForys/hubot-dad-joke"
+}
