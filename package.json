@@ -14,12 +14,13 @@
     "humour",
     "hubot"
   ],
-  "author": {
-    "name": "Dan Forys"
-  },
+  "author": "Dan Forys",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DanForys/hubot-dad-joke/issues"
   },
-  "homepage": "https://github.com/DanForys/hubot-dad-joke"
+  "homepage": "https://github.com/DanForys/hubot-dad-joke",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
