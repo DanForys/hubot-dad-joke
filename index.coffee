@@ -16,22 +16,22 @@ module.exports = (robot) ->
       user = users[0]
       user.dadScore = user.dadScore or 0
       user.dadScore += score;
+
+      if user.dadScore >= Number.MAX_SAFE_INTEGER
+        msg.reply "ERROR: DAD OVERFLOW FOR #{name}"
+        user.dadScore = 0
+
       msg.reply "#{name} now has a Dad score of #{user.dadScore}."
     else
       msg.reply "#{name}? Not a dad I know about!"
 
-  # robot.respond /dad joke @?([\w.\-]+)(\s\d+)?$/i, (msg) ->
-  #   name = msg.match[1].trim()
-  #   score = parseInt(msg.match[2]) or 1
-  #
-  #   users = robot.brain.usersForFuzzyName(name)
-  #   if users.length is 1
-  #     user = users[0]
-  #     user.dadScore = user.dadScore or 0
-  #     user.dadScore += score;
-  #     msg.send "#{name} now has a Dad score of #{user.dadScore}."
-  #   else
-  #     msg.send "#{name}? Not a dad I know about!"
+  robot.respond /dad score reset @?([\w .\-]+)$/i, (msg) ->
+    name = msg.match[1].trim()
+    users = robot.brain.usersForFuzzyName(name)
+    if users.length is 1
+      user = users[0]
+      user.dadScore = 0
+      msg.send "Ok, forgetting all the bad jokes of #{name}."
 
   robot.respond /dad score @?([\w .\-]+)$/i, (msg) ->
     name = msg.match[1].trim()
