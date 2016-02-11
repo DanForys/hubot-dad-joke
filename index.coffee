@@ -2,8 +2,9 @@
 #   Dad points tally
 #
 # Commands:
-#   hubot dad joke [points - optional]- Give dad points award to the previous responder
+#   dad joke [points - optional]- Give dad points award to the previous responder
 #   hubot dad score [name]  - Show the dad points tally
+#   hubot dad score reset [name] - Turn [name] back into a non-dad
 latestMessages = {};
 
 module.exports = (robot) ->

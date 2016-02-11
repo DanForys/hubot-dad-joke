@@ -10,4 +10,5 @@ Navigate to your Hubot instance's directory and run `npm i hubot-dad-joke --save
 
 * `dad joke` - increments the previously commenting user's Dad score by 1
 * `dad joke [x]` - award an arbitrary number of Dad points
-* `dad score [name]` - see just how funny [name] is
+* `hubot dad score [name]` - see just how funny [name] is
+* `hubot dad score reset [name]` - Turn [name] back into a non-dad and reset their score to 0
